@@ -1,0 +1,68 @@
+@import url("general.css");
+@import url("modular.css");
+@import url("mobile-navigation.css");
+@import url("desktop-version.css");
+
+.header-container {
+    min-height: 65vh;
+}
+
+
+
+
+.dropdown-container {
+    transform: scaleY(0);
+    max-height: 0;
+    transition-property: transform, max-height;
+    transform-origin: top;
+
+}
+
+
+.menu-icon {
+    transition-property: transform;
+}
+
+
+
+.landing-title {
+    max-width: 80%;
+}
+
+.landing-text {
+    max-width: 75%;
+}
+
+
+.editor-title {
+    max-width: 74%;
+}
+
+.editor-text {
+    max-width: 76%;
+    line-height: 1.5;
+}
+
+
+.art-text {
+    max-width: 75%;
+    line-height: 1.5;
+}
+
+.art-container {
+    grid-row: 2 / -1;
+}
+
+.features-text {
+    line-height: 1.5;
+}
+
+.features-section div:last-child {
+    margin-bottom: 10rem;
+}
+
+.animate {
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+
+}

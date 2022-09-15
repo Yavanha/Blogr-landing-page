@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Mobile First using CSS grid and flex box</title>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body class="bg--white">
+
+  <main class="main-container grid-container row--gap-10">
+    <section class="landing-section bg--light-red radius-bot-left-10  ">
+
+
+      <div class="header-container bg--img-intro flex col-direction row--gap-10 radius-bot-left-10 ">
+        <header class="main-header flex space-content center-items px--2 pt--4 row--gap-2">
+          <a class="logo-link txt--qhite text-big"><img class="max-width--80" src="images/logo.svg" /></a>
+          <button class="menu-mobile-btn" onclick="toggleNavBar(event)"><img src="images/icon-hamburger.svg"
+              alt="menu button" /></button>
+
+          <nav class="nav-bar flex">
+            <ul class=" primary-navigation flex ">
+              <li class="flex  col-direction ">
+                <button class="dropdown-toggle overpass-600 flex col--gap-1">
+                  Product
+                  <picture>
+                    <source media="(min-width: 45em)" srcset="images/icon-arrow-light.svg">
+                    <source media="(max-width: 44.9em)" srcset="images/icon-arrow-dark.svg">
+          
+                  <img class="menu-icon" src="images/icon-arrow-dark.svg" alt="icon of an arrow" />
+          
+                  </picture>
+                </button>
+
+              </li>
+              <li class="flex  col-direction ">
+                <button class="dropdown-toggle overpass-600 flex col--gap-1">
+                  Company
+                  <picture>
+                    <source media="(min-width: 45em)" srcset="images/icon-arrow-light.svg">
+                    <source media="(max-width: 44.9em)" srcset="images/icon-arrow-dark.svg">
+          
+                  <img class="menu-icon" src="images/icon-arrow-dark.svg" alt="icon of an arrow" />
+          
+                  </picture>
+                </button>
+
+              </li>
+              <li class="nav-item flex col-direction">
+                <button class="dropdown-toggle overpass-600 flex col--gap-1" onclick="toggleMenu(event)">
+                  Connect
+                  <picture>
+                    <source media="(min-width: 45em)" srcset="images/icon-arrow-light.svg">
+                    <source media="(max-width: 44.9em)" srcset="images/icon-arrow-dark.svg">
+          
+                  <img class="menu-icon" src="images/icon-arrow-dark.svg" alt="icon of an arrow" />
+          
+                  </picture>
+                </button>
+                <div class="dropdown-container">
+                  <ul class="dropdown-menu  flex col-direction row--gap-2  center-items">
+                    <li>
+                      <a class="menu-item overpass-600" href="#">Contact</a>
+                    </li>
+                    <li>
+                      <a class="menu-item overpass-600" href="#">Newsletter</a>
+                    </li>
+                    <li>
+                      <a class="menu-item overpass-600" href="#">Linkedin</a>
+                    </li>
+
+                  </ul>
+                </div>
+              </li>
+
+            </ul>
+
+            <div class=" flex auth-actions">
+              <button class="login-btn btn btn--big  overpass-600">
+                Login
+              </button>
+              <button class="sign-up-btn btn btn--big btn--rounded    overpass-600"> Sign up </button>
+            </div>
+          </nav>
+
+        </header>
+        <div class="flex col-direction  row--gap-4  ">
+          <div class="flex col-direction row--gap-1 center-items center-content">
+            <h1 class="landing-title  overpass-600 txt--white txt--center">
+              A modern publishing platform</h1>
+            <p class="landing-text  txt--grayish-blue overpass-300 txt--center">
+              Grow your audience and build your online brand
+            </p>
+          </div>
+          <div class="landign-actions flex center-items center-content col--gap-2">
+            <button class="btn btn--big btn--rounded bg--white txt--light-red ubuntu-700 start-btn ">
+              Start for Free
+            </button>
+
+            <button class="btn btn--big btn--rounded txt--white ubuntu-700 border--white learn-more-btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+
+
+
+    </section>
+    <section class="editor-section grid-container row--gap-5">
+      <div class="flex center-content editor-title-container ">
+        <h2 class="txt--blue-primary overpass-600 editor-main-title">
+          Designed for the future
+        </h2>
+
+      </div>
+      <picture class="flex center-content editor-img-container">
+        <source media="(min-width: 45em)" srcset="images/illustration-editor-desktop.svg">
+        <source media="(max-width: 44.9em)" srcset="images/illustration-editor-mobile.svg">
+
+      <img class="max-width--full" src="images/illustration-editor-mobile.svg" alt="illustration of the editor" />
+
+      </picture>
+
+      <div class="flex col-direction  row--gap-5 editor-text-container">
+  
+        <div class="flex col-direction row--gap-2 center-items">
+          <h2 class=" editor-title txt--blue-primary overpass-600  txt--center editor-title">
+            Introducing an extensible editor
+          </h2>
+          <p class="txt--dark-black-blue foverpass-300 txt--center editor-text">
+  
+            Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+            The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+            videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+            change the looks of a blog.
+  
+          </p>
+        </div>
+        <div class="flex col-direction row--gap-2 center-items">
+          <h2 class="txt--blue-primary overpass-600 txt-center txt--center editor-title">Robust content management</h2>
+          <p class="txt--dark-black-blue overpass-300 txt--center editor-text">
+            Flexible content management enables users to easily move through posts. Increase the usability of your blog
+            by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+          </p>
+        </div>
+      </div>
+
+    </section>
+    <section class=" art-section grid-container row--gap-5 row-template-4 radius-bot-left-10 radius-top-right-10">
+
+      <div class=" art-container grid-col-1 bg--blue radius-bot-left-10 radius-top-right-10 ">
+
+        <div class="bg--img--circle full-height flex col-direction">
+          <div class="flex col-direction center-items center-content row--gap-2 full-height art-text-container">
+            <h1 class="txt--white overpass-600 txt--center art-title">
+              State of the Art Infrastructure
+            </h1>
+            <p class="txt--grayish-blue txt--center overpass-300 art-text">
+              With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast
+              connectivity.
+              This ensures your site will load instantly, no matter where your readers are, keeping your site
+              competitive.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class=" phone-container grid-row-1-span-2 grid-col-1">
+        <img class="max-width--full" src="images/illustration-phones.svg" alt="illustration of two phones" />
+
+      </div>
+
+    </section>
+    <section class="features-section grid-container row--gap-3">
+
+        <picture class="  flex col-direction center-items row--gap-2 features-img-container">
+          <source media="(min-width: 45em)" srcset="images/illustration-laptop-desktop.svg">
+          <source media="(max-width: 44.9em)" srcset="images/illustration-laptop-mobile.svg">
+
+          <img class="max-width--full" src="images/illustration-laptop-mobile.svg" alt="" />
+
+        </picture>
+
+ 
+
+      <div class="flex col-direction  row--gap-5 features-text-container">
+        <div class="flex col-direction row--gap-2 center-items">
+          <h2 class="txt--blue-primary overpass-600">
+            Free, open, simple
+          </h2>
+          <p class="txt--dark-black-blue overpass-300 features-text features-text txt--center max-width--80">
+            Blogr is a free and open source application backed by a large community of helpful developers. It supports
+            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+          </p>
+        </div>
+        <div class="flex col-direction row--gap-2 center-items">
+          <h2 class="txt--blue-primary overpass-600">
+            Powerful tooling
+          </h2>
+          <p class="txt--dark-black-blue overpass-300  txt--center features-text max-width--80">
+            Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a
+            breeze,
+            but
+            capable of producing even the most complicated sites.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class=" main-footer bg--black--blue flex col-direction row--gap-4 center-items pa--2 radius-top-right-10">
+    <img class="max-width--50" src="images/logo.svg" />
+    <div class="txt--center footer-links flex col-direction row--gap-2">
+      <h4 class="txt--white overpass-600 ">Product</h4>
+      <ul class="txt--grayish-blue overpass-300 flex col-direction row--gap-1">
+        <li class="footer-link">Overview</li>
+        <li class="footer-link">Pricing</li>
+        <li class="footer-link">Marketplace</li>
+        <li class="footer-link">Features</li>
+        <li class="footer-link">Integrations</li>
+      </ul>
+    </div>
+    <div class="txt--center footer-links flex col-direction row--gap-2">
+      <h4 class="txt--white ">Company</h4>
+      <ul class="txt--grayish-blue overpass-300 flex col-direction row--gap-1">
+        <li class="footer-link">About</li>
+        <li class="footer-link">Team</li>
+        <l class="footer-link"i>Blog</l>
+        <li class="footer-link">Careers</li>
+      </ul>
+    </div>
+    <div class="txt--center footer-links flex col-direction row--gap-2">
+      <h4 class="txt--white " a>Connect</h4>
+      <ul class="txt--grayish-blue overpass-300 flex col-direction row--gap-1">
+        <li class="footer-link">Contact</li>
+        <li class="footer-link">Newsletter</li>
+        <li class="footer-link">LinkedIn</li>
+      </ul>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
