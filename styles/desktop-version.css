@@ -25,7 +25,7 @@
     }
     
     .bg--img-intro {
-        background-image: url("images/bg-pattern-intro-desktop.svg");
+        background-image: url("../images/bg-pattern-intro-desktop.svg");
         background-size : 220%;
         background-position: 20%;
     }
