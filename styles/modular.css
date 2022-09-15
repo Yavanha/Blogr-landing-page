@@ -110,7 +110,7 @@
 
 /* Background color and image*/
 .bg--img-intro {
-    background-image: url("images/bg-pattern-intro-mobile.svg");
+    background-image: url("../images/bg-pattern-intro-mobile.svg");
     background-repeat: no-repeat;
     background-size: 320%;
     background-position: 33% 33%;
@@ -126,7 +126,7 @@
 }
 
 .bg--img--circle {
-    background-image: url("images/bg-pattern-circles.svg");
+    background-image: url("../images/bg-pattern-circles.svg");
     background-repeat: no-repeat;
     background-size: 120%;
     background-position: center -15rem;
